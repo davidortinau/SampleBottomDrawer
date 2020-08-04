@@ -2,6 +2,7 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:a="clr-namespace:SampleBottomDrawer"
+       Visual="Material"
     x:Class="SampleBottomDrawer.AppShell">
 
     <!-- Single Page App (use ContentTemplate otherwise) -->

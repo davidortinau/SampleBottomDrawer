@@ -6,7 +6,7 @@
              Shell.ForegroundColor="White"
              Shell.TitleColor="White"
              Title="Sample"
-             ios:Page.UseSafeArea="False"
+             ios:Page.UseSafeArea="True"
              x:Class="SampleBottomDrawer.MainPage">
 
     <ContentPage.ToolbarItems>

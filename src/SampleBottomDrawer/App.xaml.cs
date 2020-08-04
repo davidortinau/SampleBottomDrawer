@@ -11,6 +11,7 @@ namespace SampleBottomDrawer
             InitializeComponent();
 
             MainPage = new AppShell();
+            //MainPage = new NavigationPage(new MainPageCode());
         }
 
         protected override void OnStart()
