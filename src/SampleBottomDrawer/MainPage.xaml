@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Shell.BackgroundColor="#732BF5"
+             Shell.ForegroundColor="White"
+             Shell.TitleColor="White"
+             Title="Sample"
+             ios:Page.UseSafeArea="False"
+             x:Class="SampleBottomDrawer.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Open Drawer"
+                     Clicked="ToolbarItem_Clicked"
+                     />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Content in the background"
+               FontSize="32"
+               Margin="75"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+
+        <!--<WebView Source="https://www.xamarin.com"/>-->
+
+        <BoxView Color="#4B000000" Opacity="0"
+                 x:Name="Backdrop">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_Tapped"/>
+            </BoxView.GestureRecognizers>
+        </BoxView>
+
+        <Frame
+            x:Name="BottomToolbar"
+            HeightRequest="200"
+            VerticalOptions="End"
+            BackgroundColor="#FFFFFF"
+            CornerRadius="20"
+            TranslationY="220"
+            Padding="15,6">
+            <Frame.GestureRecognizers>
+                <PanGestureRecognizer
+                    PanUpdated="PanGestureRecognizer_PanUpdated"
+            />
+            </Frame.GestureRecognizers>
+            <StackLayout Orientation="Vertical" Padding="0,4">
+                <BoxView CornerRadius="2" HeightRequest="4" WidthRequest="40"
+                         BackgroundColor="LightGray"
+                         HorizontalOptions="Center"/>
+                <Label Text="Actions"
+                       HorizontalOptions="Center"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <TableView Intent="Settings"
+                   VerticalOptions="End"
+                   BackgroundColor="White"
+                   >
+                    <TableSection>
+                        <TextCell
+                            Text="Favorite"/>
+                        <TextCell
+                            Text="Share"/>
+                    </TableSection>
+                </TableView>
+            </StackLayout>
+
+        </Frame>
+    </Grid>
+</ContentPage>
