@@ -5,7 +5,13 @@
        Visual="Material"
     x:Class="SampleBottomDrawer.AppShell">
 
-    <!-- Single Page App (use ContentTemplate otherwise) -->
-    <a:MainPage />
+    <FlyoutItem Title="XAML">
+        <ShellContent
+            ContentTemplate="{DataTemplate a:MainPage}"/>
+        </FlyoutItem>
+    <FlyoutItem Title="Code">
+        <ShellContent
+            ContentTemplate="{DataTemplate a:MainPageCode}"/>
+        </FlyoutItem>
     
 </Shell>

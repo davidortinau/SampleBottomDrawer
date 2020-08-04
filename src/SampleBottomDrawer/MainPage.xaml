@@ -5,7 +5,7 @@
              Shell.BackgroundColor="#732BF5"
              Shell.ForegroundColor="White"
              Shell.TitleColor="White"
-             Title="Sample"
+             Title="XAML"
              ios:Page.UseSafeArea="True"
              x:Class="SampleBottomDrawer.MainPage">
 
@@ -43,7 +43,7 @@
             VerticalOptions="End"
             BackgroundColor="#FFFFFF"
             CornerRadius="20"
-            TranslationY="220"
+            TranslationY="260"
             Padding="15,6">
             <Frame.GestureRecognizers>
                 <PanGestureRecognizer

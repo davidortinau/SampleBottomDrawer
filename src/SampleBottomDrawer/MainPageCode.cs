@@ -15,7 +15,8 @@ namespace SampleBottomDrawer
 
         public MainPageCode()
         {
-            //On<iOS>().SetUseSafeArea(false);
+            Title = "CODE";
+            On<iOS>().SetUseSafeArea(true);
 
             Content = new Grid
             {
@@ -89,7 +90,7 @@ namespace SampleBottomDrawer
         }
 
         uint duration = 100;
-        double openY = (Device.RuntimePlatform == "Android") ? 20 : 0;
+        double openY = (Device.RuntimePlatform == "Android") ? 20 : 60;
 
         async void ToolbarItem_Clicked(System.Object sender, System.EventArgs e)
         {
@@ -124,7 +125,7 @@ namespace SampleBottomDrawer
                 Debug.WriteLine($"Running: {e.TotalY}");
                 if (e.TotalY > 0)
                 {
-                    BottomToolbar.TranslationY = e.TotalY;
+                    BottomToolbar.TranslationY = openY + e.TotalY;
                 }
 
             }
